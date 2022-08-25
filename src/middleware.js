@@ -7,14 +7,17 @@ function middleware(req) {
 
   console.log(status, role);
 
-  if (req.nextUrl.pathname.startsWith('/backoffice/superadmin')) {
-    if (status == 'authenticated' && role != 'superadmin') {
-      return NextResponse.rewrite(`${origin}/backoffice`)
-    }
-  }
+  // if (req.nextUrl.pathname.startsWith('/backoffice/superadmin')) {
+  //   if (status == 'authenticated' && role != 'superadmin') {
+  //     return NextResponse.rewrite(`${origin}/backoffice`)
+  //   }
+  // }
 
-  if (status != 'authenticated' && (role != 'admin' || role != 'superadmin')) {
-    return NextResponse.rewrite(`${origin}/login`)
+  // if (status != 'authenticated' && (role != 'admin' || role != 'superadmin')) {
+  //   return NextResponse.rewrite(`${origin}/login`)
+  // }
+  if(!status){
+    return NextResponse.rewrite(`${origin}/login`);
   }
 }
 
