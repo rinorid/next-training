@@ -20,6 +20,6 @@ function middleware(req) {
 
 export default middleware
 
-export const config = {
-  matcher: '/backoffice/:path*',
-}
+// export const config = {
+//   matcher: '/backoffice/:path*',
+// }
