@@ -1,9 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+import React, { useState } from 'react'
+
+const HelloComponent = dynamic(() => import('@/components/Hello'), {
+  loading: () => <b style={{color:'#fff'}}>Loading....</b>,
+});
 
 export default function Home() {
+  const [hello, setHello] = useState(null);
+  // setHello(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -42,6 +51,13 @@ export default function Home() {
               </p>
             </a>
           </Link>
+          
+          <button style={{backgroundColor:'#000'}} onClick={() => setHello(!hello)} className={styles.card}>
+            {hello ? 'Hide' : 'Click Me' }
+          </button>
+          {
+            hello ? <HelloComponent/> : null
+          }
         </div>
       </main>
     </div>

@@ -95,7 +95,7 @@ const Detail = ({avatarData}) => {
 export async function getServerSideProps(context) {
     const res = await fetch(`http://localhost:3000/api/avatars/`+context.query.id)
     const avatarData = await res.json()
-  
+
     if (!avatarData) {
       return {
         notFound: true,

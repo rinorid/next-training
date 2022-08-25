@@ -41,6 +41,21 @@ const Navbar = () => {
                 <a>Avatar</a>
                 </Link>
             </li>
+            <li>
+                <Link href="/backoffice">
+                <a>Backoffice</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/backoffice/superadmin">
+                <a>Superadmin</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/login">
+                <a>Login</a>
+                </Link>
+            </li>
         </ul>
     </div>
   )
