@@ -4,6 +4,8 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['vignette.wikia.nocookie.net'],
+    loader: 'akamai',
+    path: '',
   }
 }
 
