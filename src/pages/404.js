@@ -3,12 +3,12 @@ import styles from '@/styles/Error.module.css'
 import Router from 'next/router'
 
 function Custom404() {
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         Router.push('/')
-    //     }, 3000);
-    //     return () => clearTimeout(timer);
-    // });
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            Router.push('/')
+        }, 3000);
+        return () => clearTimeout(timer);
+    });
 
   return (
     <div className={styles.nf}>
