@@ -1,8 +1,8 @@
-// import Head from 'next/head'
-// import { useRouter } from 'next/router'
-// import styles from '../../../styles/Detail.module.css'
-// import Link from 'next/link'
-// import Image from 'next/image'
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import styles from '../../../styles/Detail.module.css'
+import Link from 'next/link'
+import Image from 'next/image'
 
 // const Detail = ({avatarData}) => {
 //   return (

@@ -37,7 +37,7 @@ const Navbar = () => {
                 </Link>
             </li>
             <li>
-                <Link href="/avatar/list">
+                <Link href="/avatars">
                 <a>Avatar</a>
                 </Link>
             </li>
@@ -54,6 +54,26 @@ const Navbar = () => {
             <li>
                 <Link href="/login">
                 <a>Login</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/meals/csr">
+                <a>CSR</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/meals/ssr">
+                <a>SSR</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/meals/ssg">
+                <a>SSG</a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/meals/isg">
+                <a>ISG</a>
                 </Link>
             </li>
         </ul>
