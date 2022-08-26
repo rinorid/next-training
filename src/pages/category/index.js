@@ -24,7 +24,7 @@ const Categories = () => {
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
     
-    // console.log(dataCategory.categories.items);
+    console.log(dataCategory);
 
     return (
         <div className={styles.container}>

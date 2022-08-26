@@ -63,6 +63,7 @@ const ProductDetail = () => {
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
 
+    console.log(data);
     const product = data.products.items[0];
 
 
@@ -76,6 +77,7 @@ const ProductDetail = () => {
     let subsRes = "";
 
     if (dataSubs) {
+        console.log(dataSubs);
         subsMessage = dataSubs.subscribe.status.message; 
         subsRes = dataSubs.subscribe.status.response;
     }
@@ -146,9 +148,6 @@ const ProductDetail = () => {
                     </p>
                 ) : (null)
             }
-            {/* <p style={{color:'#0db4b9'}}>
-                    {subsMessage}
-            </p> */}
             { subsRes != "" && subsRes == "Success" ? (
                 <p style={{color:'#0db4b9'}}>
                     {subsMessage}
