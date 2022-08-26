@@ -1,11 +1,19 @@
 import Layout from '@/components/Layout'
 import '@/styles/globals.css'
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: 'https://b2cdemo.getswift.asia/graphql',
+  cache: new InMemoryCache(),
+});
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ApolloProvider client={client}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ApolloProvider>
   )
 }
 

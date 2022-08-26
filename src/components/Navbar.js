@@ -76,6 +76,11 @@ const Navbar = () => {
                 <a>ISG</a>
                 </Link>
             </li>
+            <li>
+                <Link href="/category">
+                <a>Category</a>
+                </Link>
+            </li>
         </ul>
     </div>
   )
