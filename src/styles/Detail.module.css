@@ -32,8 +32,8 @@
 .back:hover,
 .back:focus,
 .back:active {
-  color: #fff;
-  border-color: #fff;
+  color: #000;
+  border-color: #000;
 }
 
 .container {
