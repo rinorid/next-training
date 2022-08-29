@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import {avatar} from '../data'
+import Card from '../components/Card/MuiCard'
+import Grid from '@material-ui/core/Grid';
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
           Avatar Universe
         </h1>
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
             { 
                 avatar.map(data => (
                     <Link key={data._id} href={{ pathname: '/avatar/[id]', query: { id: data._id, name: data.name, position: data.position, gender: data.gender, profession: data.profession, image: data.photoUrl } }}>
@@ -40,7 +42,19 @@ export default function Home() {
                     </Link>
                 ))
             }
-        </div>
+        </div> */}
+        { avatar && avatar.length > 0 ? (
+            <Grid container spacing={2}>
+            {
+              avatar.map(data => (
+                  <Card key={data._id} id={data._id} photoURL={data.photoUrl} name={data.name} first={data.first} position={data.position} gender={data.gender} profession={data.profession} />
+              ))
+            }
+            </Grid>
+          ) : (
+            <p>Loading....</p>
+          )
+        }
       </main>
 
       

@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import styles from '../../styles/Detail.module.css'
 import { gql, useQuery, useMutation } from '@apollo/client';
 import Image from 'next/image'
+import ButtonSubs from '@material-ui/core/Button';
+import TextForm from '@material-ui/core/TextField';
 
 const GET_PRODUCT_BY_SKU = gql`
   query getProductBySKU($sku: String) {
@@ -131,11 +133,9 @@ const ProductDetail = () => {
             <div dangerouslySetInnerHTML={{ __html: product.description.html }} />
             <br />
             <form onSubmit={getInputValue}>
-                <label>
-                    <input type="email" name="email" placeholder='Your e-mail here' />
-                </label>
-                <br />
-                <input type="submit" value="Subscribe" />
+                <TextForm id="email" variant="outlined" label="Email" type="email" name="email" />
+                <br /><br />
+                <ButtonSubs variant="contained" color="secondary" type="submit">Subscribe</ButtonSubs>
             </form>
             <br />
             {

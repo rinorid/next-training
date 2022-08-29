@@ -52,7 +52,7 @@ export default function Home() {
             </a>
           </Link>
           
-          <button style={{backgroundColor:'#000'}} onClick={() => setHello(!hello)} className={styles.card}>
+          <button style={{backgroundColor:'#fff'}} onClick={() => setHello(!hello)} className={styles.card}>
             {hello ? 'Hide' : 'Click Me' }
           </button>
           {

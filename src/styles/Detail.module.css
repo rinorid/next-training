@@ -13,8 +13,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #fff;
-  border-color: #fff;
+  /* color: #fff; */
+  border-color: #000;
 }
 
 .back {
